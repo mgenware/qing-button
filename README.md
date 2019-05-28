@@ -28,11 +28,11 @@ class LitButton extends LitElement {
 
 ### Examples
 
-```ts
+```html
 <lit-button>Default</lit-button>
 <lit-button class="green">Green</lit-button>
 <lit-button class="black large">Black, Large</lit-button> <br />
-<lit-button .disabled=${true}>Disabled</lit-button>
+<lit-button .disabled="${true}">Disabled</lit-button>
 ```
 
 ### Development
