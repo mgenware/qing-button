@@ -58,11 +58,14 @@ export class LitButton extends LitElement {
         padding: 0.5rem 0.75rem;
         margin-bottom: 0.75rem;
       }
-
       .large {
         font-size: 1.25rem;
         padding: 1rem 1.25rem;
         margin-bottom: 1.25rem;
+      }
+
+      .round {
+        border-radius: 0.75rem;
       }
     `;
   }
