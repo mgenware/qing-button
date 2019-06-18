@@ -14,10 +14,9 @@ yarn add lit-button
 class LitButton extends LitElement {
   /* 
       Can be any combination of below:
-        Color: green, blue, red, gray, black
-        Size: large, small
-
-      Defaults to gray and normal size
+        Color: gray(default), green, blue, red, black
+        Size: normal(default), large, small
+        Border style: rectangular(default), round
 
       e.g. class="blue large", class="red"
     */
