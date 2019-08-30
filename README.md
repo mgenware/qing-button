@@ -10,19 +10,18 @@ yarn add lit-button
 
 ## Properties
 
-```ts
-class LitButton extends LitElement {
-  /* 
-      Can be any combination of below:
-        Color: gray(default), green, blue, red, black
-        Size: normal(default), large, small
-        Border style: rectangular(default), round
+`disabled` when present, the button is disabled.
 
-      e.g. class="blue large", class="red"
-    */
-  class: string;
-  disabled: boolean;
-}
+## CSS Variables
+
+```
+--button-background-color
+--button-color
+--button-border
+--button-padding
+--button-margin-bottom
+--button-disabled-background-color
+--button-disabled-color
 ```
 
 ### Examples
