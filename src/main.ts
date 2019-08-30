@@ -19,25 +19,24 @@ export class LitButton extends LitElement {
         transition: all 0.3s ease 0s;
       }
       button:hover {
-        filter: brightness(120%);
+        opacity: 0.8;
       }
       button:active {
         filter: brightness(80%);
       }
       button:disabled {
         pointer-events: none;
-        background-color: #e7e7e7;
-        color: gray;
+        background-color: var(--button-disabled-background-color, #e7e7e7);
+        color: var(--button-disabled-color, black);
       }
     `;
   }
 
-  @property() class = '';
   @property() disabled = false;
 
   render() {
     return html`
-      <button class=${this.class} ?disabled=${this.disabled}>
+      <button ?disabled=${this.disabled}>
         <slot></slot>
       </button>
     `;
