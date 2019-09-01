@@ -14,7 +14,7 @@ export class LitButton extends LitElement {
         display: inline-block;
         cursor: pointer;
         font-size: var(--button-font-size, 1rem);
-        padding: var(--button-padding, 0.75rem 1rem);
+        padding: var(--button-padding, 0.6rem 0.9rem);
         margin-bottom: var(--button-margin-bottom, 1rem);
         transition: all 0.3s ease 0s;
       }
