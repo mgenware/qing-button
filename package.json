@@ -29,12 +29,12 @@
     "node": ">=8.0.0"
   },
   "devDependencies": {
-    "@types/node": "^12.7.2",
-    "cross-env": "^5.2.0",
-    "del-cli": "^2.0.0",
+    "@types/node": "^12.7.5",
+    "cross-env": "^5.2.1",
+    "del-cli": "^3.0.0",
     "lit-element": "^2.2.1",
     "owc-dev-server": "^1.0.1",
-    "tslint": "^5.19.0",
-    "typescript": "^3.5.3"
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
   }
 }
