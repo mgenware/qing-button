@@ -26,8 +26,7 @@ export class LitButton extends LitElement {
       }
       button:disabled {
         pointer-events: none;
-        background-color: var(--button-disabled-background-color, #e7e7e7);
-        color: var(--button-disabled-color, black);
+        opacity: 0.6;
       }
     `;
   }
