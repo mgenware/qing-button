@@ -10,7 +10,9 @@ export class DemoApp extends LitElement {
       <lit-button class="black large">Black, Large</lit-button> <br />
       <lit-button class="blue small round">Blue, small, round</lit-button>
       <br />
-      <lit-button .disabled=${true}>Disabled</lit-button>
+      <lit-button disabled="true">Disabled</lit-button>
+      <br />
+      <lit-button autofocus="true">Autofocused</lit-button>
     `;
   }
 }

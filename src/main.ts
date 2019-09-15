@@ -33,10 +33,11 @@ export class LitButton extends LitElement {
   }
 
   @property() disabled = false;
+  @property() autofocus = false;
 
   render() {
     return html`
-      <button ?disabled=${this.disabled}>
+      <button ?disabled=${this.disabled} ?autofocus=${this.autofocus}>
         <slot></slot>
       </button>
     `;
