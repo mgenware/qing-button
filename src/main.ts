@@ -34,11 +34,29 @@ export class LitButton extends LitElement {
   @property() disabled = false;
   @property() autofocus = false;
 
+  private buttonElement: HTMLButtonElement | null = null;
+
+  firstUpdated() {
+    this.buttonElement = this.shadowRoot!.getElementById(
+      'button',
+    ) as HTMLButtonElement;
+  }
+
   render() {
     return html`
-      <button ?disabled=${this.disabled} ?autofocus=${this.autofocus}>
+      <button
+        id="button"
+        ?disabled=${this.disabled}
+        ?autofocus=${this.autofocus}
+      >
         <slot></slot>
       </button>
     `;
+  }
+
+  focus() {
+    if (this.buttonElement) {
+      this.buttonElement.focus();
+    }
   }
 }
