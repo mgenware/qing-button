@@ -1,6 +1,6 @@
 {
   "name": "lit-button",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Dead simple lit-element button",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
