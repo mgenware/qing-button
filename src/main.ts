@@ -31,8 +31,8 @@ export class LitButton extends LitElement {
     `;
   }
 
-  @property() disabled = false;
-  @property() autofocus = false;
+  @property({ type: Boolean }) disabled = false;
+  @property({ type: Boolean }) autofocus = false;
 
   private buttonElement: HTMLButtonElement | null = null;
 
