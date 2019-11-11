@@ -37,7 +37,10 @@ export class LitButton extends LitElement {
   private buttonElement: HTMLButtonElement | null = null;
 
   firstUpdated() {
-    this.buttonElement = this.shadowRoot!.getElementById(
+    if (!this.shadowRoot) {
+      throw new Error('Unexpected undefined shadowRoot');
+    }
+    this.buttonElement = this.shadowRoot.getElementById(
       'button',
     ) as HTMLButtonElement;
   }
