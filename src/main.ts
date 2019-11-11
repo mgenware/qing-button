@@ -1,7 +1,7 @@
 import { html, customElement, css, property, LitElement } from 'lit-element';
 
 @customElement('lit-button')
-export class LitButton extends LitElement {
+export default class LitButton extends LitElement {
   // Styles are based on https://www.w3schools.com/css/css3_buttons.asp
   static get styles() {
     return css`
