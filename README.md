@@ -1,5 +1,8 @@
 # lit-button
 
+[![npm version](https://img.shields.io/npm/v/lit-button.svg?style=flat-square)](https://npmjs.com/package/lit-button)
+[![Node.js Version](http://img.shields.io/node/v/lit-button.svg?style=flat-square)](https://nodejs.org/en/)
+
 Dead simple lit-element button
 
 ## Installation
