@@ -23,8 +23,8 @@ yarn add lit-button
 --button-color
 --button-border
 --button-font-size
+--button-margin
 --button-padding
---button-margin-bottom
 ```
 
 ### Examples

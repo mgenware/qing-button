@@ -15,7 +15,7 @@ export default class LitButton extends LitElement {
         cursor: pointer;
         font-size: var(--button-font-size, 1rem);
         padding: var(--button-padding, 0.6rem 0.9rem);
-        margin-bottom: var(--button-margin-bottom, 1rem);
+        margin: var(--button-margin, 0 0 1rem 0);
         transition: all 0.3s ease 0s;
       }
       button:hover {
