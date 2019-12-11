@@ -4,7 +4,10 @@ import '../dist/main';
 export class DemoApp extends LitElement {
   render() {
     return html`
-      <lit-button id="btn">Default</lit-button> <br />
+      <lit-button id="btn" @click=${() => alert('Hello world')}
+        >Default</lit-button
+      >
+      <br />
       <lit-button class="green">Green</lit-button> <br />
       <lit-button class="small">Small</lit-button> <br />
       <lit-button class="black large">Black, Large</lit-button> <br />
@@ -16,9 +19,8 @@ export class DemoApp extends LitElement {
       <br />
       <lit-button disabled>Disabled</lit-button>
       <br />
-      <lit-button autofocus>Autofocused</lit-button>
+      <lit-button autofocus>Auto-focused</lit-button>
       <hr />
-      <button @click=${this.handleFocusClick}>Call focus()</button>
     `;
   }
 
