@@ -13,7 +13,8 @@ yarn add lit-button
 
 ## Properties
 
-`disabled` when present, the button is disabled.
+`disabled: boolean` indicates whether the button is disabled.
+`autofocus: boolean` indicates whether the button is focused when the page loads.
 
 ## CSS Variables
 
@@ -21,10 +22,9 @@ yarn add lit-button
 --button-background-color
 --button-color
 --button-border
+--button-font-size
 --button-padding
 --button-margin-bottom
---button-disabled-background-color
---button-disabled-color
 ```
 
 ### Examples
@@ -40,8 +40,8 @@ html`
 `;
 ```
 
-### Development
+### Build Instructions
 
-- `yarn dev` build the project in dev mode
-- `yarn build` build and lint the project in production mode
-- `yarn demo` run the demo in browser (you have to build the project first)
+- `yarn dev` builds the project in dev mode
+- `yarn build` builds and lints the project in production mode
+- `yarn demo` runs the demo in browser (you have to build the project first)
