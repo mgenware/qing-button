@@ -19,24 +19,28 @@ yarn add lit-button
 ## CSS Variables
 
 ```
---button-background-color
 --button-color
+--button-background-color
 --button-border
 --button-font-size
 --button-margin
 --button-padding
+--button-display
+--button-cursor
+--button-transition
 ```
 
 ### Examples
 
 ```js
 html`
-  <lit-button>Default</lit-button>
+  <lit-button id="btn" @click=${() => alert('Hello world')}>Default</lit-button>
   <lit-button class="green">Green</lit-button>
   <lit-button class="small">Small</lit-button>
   <lit-button class="black large">Black, Large</lit-button>
   <lit-button class="blue small round">Blue, small, round</lit-button>
   <lit-button .disabled=${true}>Disabled</lit-button>
+  <lit-button autofocus>Auto-focused</lit-button>
 `;
 ```
 

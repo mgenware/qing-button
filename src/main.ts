@@ -11,12 +11,12 @@ export default class LitButton extends LitElement {
         border: var(--button-border, none);
         text-align: center;
         text-decoration: none;
-        display: inline-block;
-        cursor: pointer;
+        display: var(--button-display, inline-block);
+        cursor: var(--button-cursor, pointer);
         font-size: var(--button-font-size, 1rem);
         padding: var(--button-padding, 0.6rem 0.9rem);
         margin: var(--button-margin, 0 0 1rem 0);
-        transition: all 0.3s ease 0s;
+        transition: var(--button-transition, all 0.3s ease 0s);
       }
       button:hover {
         opacity: 0.8;
