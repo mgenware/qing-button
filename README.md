@@ -13,8 +13,8 @@ yarn add lit-button
 
 ## Properties
 
-`disabled: boolean` indicates whether the button is disabled.
-`autofocus: boolean` indicates whether the button is focused when the page loads.
+- `disabled: boolean` indicates whether the button is disabled.
+- `autofocus: boolean` indicates whether the button is focused when the page loads.
 
 ## CSS Variables
 
