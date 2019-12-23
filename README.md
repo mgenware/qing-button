@@ -1,5 +1,6 @@
 # lit-button
 
+[![Build Status](https://img.shields.io/travis/mgenware/lit-button.svg?style=flat-square&label=Build+Status)](https://travis-ci.org/mgenware/lit-button)
 [![npm version](https://img.shields.io/npm/v/lit-button.svg?style=flat-square)](https://npmjs.com/package/lit-button)
 [![Node.js Version](http://img.shields.io/node/v/lit-button.svg?style=flat-square)](https://nodejs.org/en/)
 
@@ -49,3 +50,4 @@ html`
 - `yarn dev` builds the project in dev mode
 - `yarn build` builds and lints the project in production mode
 - `yarn demo` runs the demo in browser (you have to build the project first)
+- `yarn test` runs UI tests

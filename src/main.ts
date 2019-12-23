@@ -63,3 +63,9 @@ export default class LitButton extends LitElement {
     }
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'lit-button': LitButton;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "lit-button",
-  "version": "3.1.1",
+  "version": "3.1.5",
   "description": "Dead simple lit-element button",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -16,7 +16,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "yarn run clean && yarn run compile && yarn run lint",
+    "test": "yarn run clean && yarn run compile && yarn run lint && yarn run t",
+    "t": "karma start",
     "build": "cross-env NODE_ENV=production yarn test",
     "compile": "tsc -b src",
     "dev": "cross-env NODE_ENV=development yarn run clean && tsc -b src -w",
@@ -34,15 +35,20 @@
     "/dist/**/*.map"
   ],
   "devDependencies": {
+    "@open-wc/testing": "^2.4.2",
+    "@open-wc/testing-karma": "^3.2.17",
     "@types/node": "^12.12.7",
     "@typescript-eslint/eslint-plugin": "^2.3.2",
     "@typescript-eslint/parser": "^2.3.2",
+    "babel-plugin-bare-import-rewrite": "^1.5.1",
     "cross-env": "^6.0.3",
     "del-cli": "^3.0.0",
     "eslint": "^6.6.0",
+    "karma": "^4.4.1",
     "lit-analyzer": "^1.1.9",
     "lit-element": "^2.2.1",
     "owc-dev-server": "^1.0.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "webpack-merge": "^4.2.2"
   }
 }
