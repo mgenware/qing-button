@@ -28,6 +28,11 @@
   "engines": {
     "node": ">=8.0.0"
   },
+  "files": [
+    "/dist/**/*.js",
+    "/dist/**/*.ts",
+    "/dist/**/*.map"
+  ],
   "devDependencies": {
     "@types/node": "^12.12.7",
     "@typescript-eslint/eslint-plugin": "^2.3.2",
