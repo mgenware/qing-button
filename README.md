@@ -29,6 +29,7 @@ yarn add lit-button
 --button-display
 --button-cursor
 --button-transition
+--button-outline-color
 ```
 
 ### Examples
