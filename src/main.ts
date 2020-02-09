@@ -9,6 +9,7 @@ export default class LitButton extends LitElement {
         background-color: var(--button-background-color, #e7e7e7);
         color: var(--button-color, black);
         border: var(--button-border, none);
+        border-radius: var(--button-border-radius, 0);
         text-align: center;
         text-decoration: none;
         display: var(--button-display, inline-block);

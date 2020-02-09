@@ -30,6 +30,7 @@ yarn add lit-button
 --button-cursor
 --button-transition
 --button-outline-color
+--button-border-radius
 ```
 
 ### Examples
