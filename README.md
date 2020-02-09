@@ -16,6 +16,7 @@ yarn add lit-button
 
 - `disabled: boolean` indicates whether the button is disabled.
 - `autofocus: boolean` indicates whether the button is focused when the page loads.
+- `href: string` navigates to the given URL when clicked on.
 
 ## CSS Variables
 

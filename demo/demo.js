@@ -20,6 +20,8 @@ export class DemoApp extends LitElement {
       <lit-button disabled>Disabled</lit-button>
       <br />
       <lit-button autofocus>Auto-focused</lit-button>
+      <br />
+      <lit-button href="http://google.com">href = google.com</lit-button>
       <hr />
     `;
   }

@@ -38,6 +38,7 @@ export default class LitButton extends LitElement {
 
   @property({ type: Boolean }) disabled = false;
   @property({ type: Boolean }) autofocus = false;
+  @property({ type: String }) href = '';
 
   private buttonElement: HTMLButtonElement | null = null;
 
@@ -56,6 +57,7 @@ export default class LitButton extends LitElement {
         id="button"
         ?disabled=${this.disabled}
         ?autofocus=${this.autofocus}
+        @click=${this.handleClick}
       >
         <slot></slot>
       </button>
@@ -65,6 +67,14 @@ export default class LitButton extends LitElement {
   focus() {
     if (this.buttonElement) {
       this.buttonElement.focus();
+    }
+  }
+
+  private handleClick(e: Event) {
+    if (this.href) {
+      window.location.href = this.href;
+      e.preventDefault();
+      e.stopImmediatePropagation();
     }
   }
 }
