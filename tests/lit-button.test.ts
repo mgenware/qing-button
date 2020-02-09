@@ -10,7 +10,7 @@ it('Content slot', async () => {
   expect(el.innerHTML).to.eq('<p>test</p>');
 });
 
-it('click event', async () => {
+it('Click event', async () => {
   const el = (await fixture(html`
     <lit-button></lit-button>
   `)) as HTMLElement;
