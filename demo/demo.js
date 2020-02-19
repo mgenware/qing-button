@@ -36,6 +36,15 @@ export class DemoApp extends LitElement {
   }
 }
 DemoApp.styles = css`
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
   .green {
     --button-background-color: #4caf50;
     --button-color: white;
