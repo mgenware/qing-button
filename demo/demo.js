@@ -11,10 +11,12 @@ export class DemoApp extends LitElement {
       <lit-button class="green">Green</lit-button> <br />
       <lit-button class="small">Small</lit-button> <br />
       <lit-button class="black large">Black, Large</lit-button> <br />
-      <lit-button class="blue small round">Blue, small, round</lit-button>
+      <lit-button class="blue small round colored-border"
+        >Blue, small, round, colored-border</lit-button
+      >
       <br />
-      <lit-button class="blue small round" disabled>
-        Blue, small, round, disabled
+      <lit-button class="blue small round colored-border" disabled>
+        Blue, small, round, colored-border, disabled
       </lit-button>
       <br />
       <lit-button disabled>Disabled</lit-button>
@@ -22,7 +24,10 @@ export class DemoApp extends LitElement {
       <lit-button autofocus>Auto-focused</lit-button>
       <br />
       <lit-button href="http://google.com">href = google.com</lit-button>
-      <hr />
+      <p>
+        A <lit-button class="btn-in-paragraph">button</lit-button> in a
+        paragraph.
+      </p>
     `;
   }
 
@@ -64,6 +69,14 @@ DemoApp.styles = css`
   }
   .round {
     --button-border-radius: 0.75rem;
+  }
+  .colored-border {
+    --button-border: 4px solid yellowgreen;
+    --button-border-radius: 10px;
+  }
+  .btn-in-paragraph {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
   }
 `;
 customElements.define('demo-app', DemoApp);
