@@ -6,11 +6,16 @@ export default class LitButton extends LitElement {
     return css`
       :host {
         display: inline-block;
+        margin: var(--button-margin, 0 0 1rem 0);
       }
       button {
         background-color: var(--button-background-color, #e7e7e7);
         color: var(--button-color, black);
-        border: var(--button-border, none);
+        border: var(--button-border);
+        border-left: var(--button-border-left, var(--button-border));
+        border-right: var(--button-border-right, var(--button-border));
+        border-top: var(--button-border-top, var(--button-border));
+        border-bottom: var(--button-border-bottom, var(--button-border));
         border-radius: var(--button-border-radius, 0);
         text-align: center;
         text-decoration: none;
@@ -18,7 +23,6 @@ export default class LitButton extends LitElement {
         cursor: var(--button-cursor, pointer);
         font-size: var(--button-font-size, 1rem);
         padding: var(--button-padding, 0.6rem 0.9rem);
-        margin: var(--button-margin, 0 0 1rem 0);
         transition: var(--button-transition, all 0.3s ease 0s);
       }
       button:hover {
