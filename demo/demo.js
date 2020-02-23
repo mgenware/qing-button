@@ -28,6 +28,11 @@ export class DemoApp extends LitElement {
         A <lit-button class="btn-in-paragraph">button</lit-button> in a
         paragraph.
       </p>
+      <p class="btn-group">
+        <lit-button>Windows</lit-button>
+        <lit-button>macOS</lit-button>
+        <lit-button>Linux</lit-button>
+      </p>
     `;
   }
 
@@ -86,6 +91,22 @@ DemoApp.styles = css`
   .btn-in-paragraph {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
+  }
+  .btn-group {
+    display: flex;
+    flex-direction: row;
+  }
+  .btn-group lit-button {
+    --button-border: 1px solid gray;
+  }
+  .btn-group lit-button:not(:last-child) {
+    --button-border-right: none;
+  }
+  .btn-group lit-button:first-child {
+    --button-border-radius: 5px 0 0 5px;
+  }
+  .btn-group lit-button:last-child {
+    --button-border-radius: 0 5px 5px 0;
   }
 `;
 customElements.define('demo-app', DemoApp);
