@@ -2,7 +2,6 @@ import { html, customElement, css, property, LitElement } from 'lit-element';
 
 @customElement('lit-button')
 export default class LitButton extends LitElement {
-  // Styles are based on https://www.w3schools.com/css/css3_buttons.asp
   static get styles() {
     return css`
       :host {
@@ -33,7 +32,7 @@ export default class LitButton extends LitElement {
         opacity: 0.6;
       }
       button:focus {
-        box-shadow: 0 0 0 0.2rem var(--button-outline-color, #8dc3eb);
+        box-shadow: inset 0 0 0 0.2rem var(--button-outline-color, #8dc3eb);
         outline: none;
       }
     `;
