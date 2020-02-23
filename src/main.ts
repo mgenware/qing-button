@@ -5,6 +5,9 @@ export default class LitButton extends LitElement {
   // Styles are based on https://www.w3schools.com/css/css3_buttons.asp
   static get styles() {
     return css`
+      :host {
+        display: inline-block;
+      }
       button {
         background-color: var(--button-background-color, #e7e7e7);
         color: var(--button-color, black);
