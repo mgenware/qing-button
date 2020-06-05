@@ -18,32 +18,23 @@ yarn add lit-button
 - `autofocus: boolean` indicates whether the button is focused when the page loads.
 - `href: string` navigates to the given URL when clicked on.
 
-## CSS Variables
+## CSS Shadow Parts
 
-```
---button-color
---button-background-color
---button-border
---button-font-size
---button-margin
---button-padding
---button-display
---button-cursor
---button-transition
---button-outline-color
---button-border-radius
+- `button` the underlying button.
+
+```css
+lit-button.colored-border::part(button) {
+  border: 4px solid yellowgreen;
+  border-radius: 10px;
+}
 ```
 
 ### Examples
 
 ```js
 html`
-  <lit-button id="btn" @click=${() => alert('Hello world')}>Default</lit-button>
-  <lit-button class="green">Green</lit-button>
-  <lit-button class="small">Small</lit-button>
-  <lit-button class="black large">Black, Large</lit-button>
-  <lit-button class="blue small round">Blue, small, round</lit-button>
-  <lit-button .disabled=${true}>Disabled</lit-button>
+  <lit-button @click=${() => alert('Hello world')}>Default</lit-button>
+  <lit-button disabled>Disabled</lit-button>
   <lit-button autofocus>Auto-focused</lit-button>
 `;
 ```
