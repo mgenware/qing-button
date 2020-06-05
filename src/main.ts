@@ -6,24 +6,20 @@ export default class LitButton extends LitElement {
     return css`
       :host {
         display: inline-block;
-        margin: var(--button-margin, 0 0 1rem 0);
       }
       button {
-        background-color: var(--button-background-color, #e7e7e7);
-        color: var(--button-color, black);
-        border: var(--button-border);
-        border-left: var(--button-border-left, var(--button-border));
-        border-right: var(--button-border-right, var(--button-border));
-        border-top: var(--button-border-top, var(--button-border));
-        border-bottom: var(--button-border-bottom, var(--button-border));
-        border-radius: var(--button-border-radius, 0);
+        margin: 0 0 1rem 0;
+        background-color: #e7e7e7;
+        color: black;
+        border: 0;
+        border-radius: 0;
         text-align: center;
         text-decoration: none;
-        display: var(--button-display, inline-block);
-        cursor: var(--button-cursor, pointer);
-        font-size: var(--button-font-size, 1rem);
-        padding: var(--button-padding, 0.6rem 0.9rem);
-        transition: var(--button-transition, all 0.3s ease 0s);
+        display: inline-block;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 0.6rem 0.9rem;
+        transition: all 0.3s ease 0s;
       }
       button:hover {
         opacity: 0.8;
@@ -36,7 +32,7 @@ export default class LitButton extends LitElement {
         opacity: 0.6;
       }
       button:focus {
-        box-shadow: inset 0 0 0 0.2rem var(--button-outline-color, #8dc3eb);
+        box-shadow: inset 0 0 0 0.2rem #8dc3eb;
         outline: none;
       }
     `;
@@ -61,6 +57,7 @@ export default class LitButton extends LitElement {
     return html`
       <button
         id="button"
+        part="button"
         ?disabled=${this.disabled}
         ?autofocus=${this.autofocus}
         @click=${this.handleClick}

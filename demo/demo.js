@@ -50,43 +50,43 @@ DemoApp.styles = css`
     box-sizing: inherit;
   }
 
-  .green {
-    --button-background-color: #4caf50;
-    --button-color: white;
+  lit-button.green::part(button) {
+    background-color: #4caf50;
+    color: white;
   } /* Green */
-  .blue {
-    --button-background-color: #008cba;
-    --button-color: white;
+  lit-button.blue::part(button) {
+    background-color: #008cba;
+    color: white;
   } /* Blue */
-  .red {
-    --button-background-color: #f44336;
-    --button-color: white;
+  lit-button.red::part(button) {
+    background-color: #f44336;
+    color: white;
   } /* Red */
-  .gray {
-    --button-background-color: #e7e7e7;
-    --button-color: black;
+  lit-button.gray::part(button) {
+    background-color: #e7e7e7;
+    color: black;
   } /* Gray */
-  .black {
-    --button-background-color: #555555;
-    --button-color: white;
+  lit-button.black::part(button) {
+    background-color: #555555;
+    color: white;
   } /* Black */
 
-  .small {
-    --button-font-size: 0.75rem;
-    --button-padding: 0.5rem 0.75rem;
-    --button-margin-bottom: 0.75rem;
+  lit-button.small::part(button) {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.75rem;
   }
-  .large {
-    --button-font-size: 1.25rem;
-    --button-padding: 1rem 1.25rem;
-    --button-margin-bottom: 1.25rem;
+  lit-button.large::part(button) {
+    font-size: 1.25rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
   }
-  .round {
-    --button-border-radius: 0.75rem;
+  lit-button.round::part(button) {
+    border-radius: 0.75rem;
   }
-  .colored-border {
-    --button-border: 4px solid yellowgreen;
-    --button-border-radius: 10px;
+  lit-button.colored-border::part(button) {
+    border: 4px solid yellowgreen;
+    border-radius: 10px;
   }
   .btn-in-paragraph {
     margin-left: 0.25rem;
@@ -96,17 +96,17 @@ DemoApp.styles = css`
     display: flex;
     flex-direction: row;
   }
-  .btn-group lit-button {
-    --button-border: 1px solid gray;
+  .btn-group lit-button::part(button) {
+    border: 1px solid gray;
   }
-  .btn-group lit-button:not(:last-child) {
-    --button-border-right: none;
+  .btn-group lit-button:not(:last-child)::part(button) {
+    border-right: none;
   }
-  .btn-group lit-button:first-child {
-    --button-border-radius: 5px 0 0 5px;
+  .btn-group lit-button:first-child::part(button) {
+    border-radius: 5px 0 0 5px;
   }
-  .btn-group lit-button:last-child {
-    --button-border-radius: 0 5px 5px 0;
+  .btn-group lit-button:last-child::part(button) {
+    border-radius: 0 5px 5px 0;
   }
 `;
 customElements.define('demo-app', DemoApp);
