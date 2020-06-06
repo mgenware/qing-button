@@ -39,6 +39,9 @@ export class DemoApp extends LitElement {
         <lit-button id="themes" @click=${this.switchThemes}
           >Switch themes</lit-button
         ><br />
+
+        <h2>CSS variables</h2>
+        <lit-button id="button-outline">--button-outline-color</lit-button>
       </div>
     `;
   }
@@ -143,6 +146,10 @@ DemoApp.styles = css`
   #themes::part(button) {
     background-color: var(--default-back-color);
     color: var(--default-fore-color);
+  }
+
+  #button-outline {
+    --button-outline-color: orange;
   }
 `;
 customElements.define('demo-app', DemoApp);

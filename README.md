@@ -12,13 +12,15 @@ Dead simple lit-element button
 yarn add lit-button
 ```
 
-## Properties
+## Usage
+
+### Properties
 
 - `disabled: boolean` indicates whether the button is disabled.
 - `autofocus: boolean` indicates whether the button is focused when the page loads.
 - `href: string` navigates to the given URL when clicked on.
 
-## CSS Shadow Parts
+### CSS Shadow Parts
 
 - `button` the underlying button.
 
@@ -28,6 +30,12 @@ lit-button.colored-border::part(button) {
   border-radius: 10px;
 }
 ```
+
+### CSS Variables
+
+lit-button also has some CSS variables for quick customization.
+
+`--button-outline-color` focus outline color, defaults to `8dc3eb`.
 
 ### Examples
 

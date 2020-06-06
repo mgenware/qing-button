@@ -32,7 +32,7 @@ export default class LitButton extends LitElement {
         opacity: 0.6;
       }
       button:focus {
-        box-shadow: inset 0 0 0 0.2rem #8dc3eb;
+        box-shadow: inset 0 0 0 0.2rem var(--button-outline-color, #8dc3eb);
         outline: none;
       }
     `;
