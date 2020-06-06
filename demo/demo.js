@@ -1,43 +1,59 @@
 import { html, LitElement, css } from '../node_modules/lit-element';
 import '../dist/main';
 
+const darkThemeClass = 'theme-dark';
+
 export class DemoApp extends LitElement {
   render() {
     return html`
-      <lit-button id="btn" @click=${() => alert('Hello world')}
-        >Default</lit-button
-      >
-      <br />
-      <lit-button class="green">Green</lit-button> <br />
-      <lit-button class="small">Small</lit-button> <br />
-      <lit-button class="black large">Black, Large</lit-button> <br />
-      <lit-button class="blue small round colored-border"
-        >Blue, small, round, colored-border</lit-button
-      >
-      <br />
-      <lit-button class="blue small round colored-border" disabled>
-        Blue, small, round, colored-border, disabled
-      </lit-button>
-      <br />
-      <lit-button disabled>Disabled</lit-button>
-      <br />
-      <lit-button autofocus>Auto-focused</lit-button>
-      <br />
-      <lit-button href="http://google.com">href = google.com</lit-button>
-      <p>
-        A <lit-button class="btn-in-paragraph">button</lit-button> in a
-        paragraph.
-      </p>
-      <p class="btn-group">
-        <lit-button>Windows</lit-button>
-        <lit-button>macOS</lit-button>
-        <lit-button>Linux</lit-button>
-      </p>
+      <div id="main">
+        <lit-button id="btn" @click=${() => alert('Hello world')}
+          >Default</lit-button
+        >
+        <br />
+        <lit-button class="green">Green</lit-button> <br />
+        <lit-button class="small">Small</lit-button> <br />
+        <lit-button class="black large">Black, Large</lit-button> <br />
+        <lit-button class="blue small round colored-border"
+          >Blue, small, round, colored-border</lit-button
+        >
+        <br />
+        <lit-button class="blue small round colored-border" disabled>
+          Blue, small, round, colored-border, disabled
+        </lit-button>
+        <br />
+        <lit-button disabled>Disabled</lit-button>
+        <br />
+        <lit-button autofocus>Auto-focused</lit-button>
+        <br />
+        <lit-button href="http://google.com">href = google.com</lit-button>
+        <p>
+          A <lit-button class="btn-in-paragraph">button</lit-button> in a
+          paragraph.
+        </p>
+        <p class="btn-group">
+          <lit-button>Windows</lit-button>
+          <lit-button>macOS</lit-button>
+          <lit-button>Linux</lit-button>
+        </p>
+        <lit-button id="themes" @click=${this.switchThemes}
+          >Switch themes</lit-button
+        ><br />
+      </div>
     `;
   }
 
   handleFocusClick() {
     this.shadowRoot.getElementById('btn').focus();
+  }
+
+  switchThemes() {
+    const { classList } = this.shadowRoot.getElementById('main');
+    if (classList.contains(darkThemeClass)) {
+      classList.remove(darkThemeClass);
+    } else {
+      classList.add(darkThemeClass);
+    }
   }
 }
 DemoApp.styles = css`
@@ -107,6 +123,26 @@ DemoApp.styles = css`
   }
   .btn-group lit-button:last-child::part(button) {
     border-radius: 0 5px 5px 0;
+  }
+
+  :host {
+    --default-back-color: yellowgreen;
+    --default-fore-color: black;
+  }
+
+  .theme-dark {
+    --default-back-color: black;
+    --default-fore-color: #777777;
+  }
+
+  h1 {
+    background-color: var(--default-back-color);
+    color: var(--default-fore-color);
+  }
+
+  #themes::part(button) {
+    background-color: var(--default-back-color);
+    color: var(--default-fore-color);
   }
 `;
 customElements.define('demo-app', DemoApp);
