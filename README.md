@@ -43,5 +43,5 @@ html`
 
 - `yarn dev` builds the project in dev mode
 - `yarn build` builds and lints the project in production mode
-- `yarn demo` runs the demo in browser (you have to build the project first)
+- `yarn serve` runs a demo page in browser (you have to build the project first)
 - `yarn test` runs UI tests
