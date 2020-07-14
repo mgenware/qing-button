@@ -7,6 +7,8 @@ import {
   CSSResultArray,
 } from 'lit-element';
 
+export type QingButtonStyle = 'primary' | 'success' | 'danger' | 'warning' | '';
+
 @customElement('qing-button')
 export default class LitButton extends LitElement {
   static get styles(): CSSResultArray {
@@ -50,6 +52,7 @@ export default class LitButton extends LitElement {
   @property({ type: Boolean }) disabled = false;
   @property({ type: Boolean }) autofocus = false;
   @property({ type: String }) href = '';
+  @property({ type: String, reflect: true }) btnStyle: QingButtonStyle = '';
 
   private buttonElement: HTMLButtonElement | null = null;
 
