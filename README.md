@@ -1,15 +1,15 @@
-# lit-button
+# qing-button
 
-[![Build Status](https://github.com/mgenware/lit-button/workflows/Build/badge.svg)](https://github.com/mgenware/lit-button/actions)
-[![npm version](https://img.shields.io/npm/v/lit-button.svg?style=flat-square)](https://npmjs.com/package/lit-button)
-[![Node.js Version](http://img.shields.io/node/v/lit-button.svg?style=flat-square)](https://nodejs.org/en/)
+[![Build Status](https://github.com/mgenware/qing-button/workflows/Build/badge.svg)](https://github.com/mgenware/qing-button/actions)
+[![npm version](https://img.shields.io/npm/v/qing-button.svg?style=flat-square)](https://npmjs.com/package/qing-button)
+[![Node.js Version](http://img.shields.io/node/v/qing-button.svg?style=flat-square)](https://nodejs.org/en/)
 
-Dead simple lit-element button
+Button component for [qing](https://github.com/mgenware/qing)
 
 ## Installation
 
 ```sh
-yarn add lit-button
+yarn add qing-button
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ yarn add lit-button
 - `button` the underlying button.
 
 ```css
-lit-button.colored-border::part(button) {
+qing-button.colored-border::part(button) {
   border: 4px solid yellowgreen;
   border-radius: 10px;
 }
@@ -33,7 +33,7 @@ lit-button.colored-border::part(button) {
 
 ### CSS Variables
 
-lit-button also has some CSS variables for quick customization.
+qing-button also has some CSS variables for quick customization.
 
 `--button-outline-color` focus outline color, defaults to `8dc3eb`.
 
@@ -41,9 +41,9 @@ lit-button also has some CSS variables for quick customization.
 
 ```js
 html`
-  <lit-button @click=${() => alert('Hello world')}>Default</lit-button>
-  <lit-button disabled>Disabled</lit-button>
-  <lit-button autofocus>Auto-focused</lit-button>
+  <qing-button @click=${() => alert('Hello world')}>Default</qing-button>
+  <qing-button disabled>Disabled</qing-button>
+  <qing-button autofocus>Auto-focused</qing-button>
 `;
 ```
 

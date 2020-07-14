@@ -7,7 +7,7 @@ import {
   CSSResultArray,
 } from 'lit-element';
 
-@customElement('lit-button')
+@customElement('qing-button')
 export default class LitButton extends LitElement {
   static get styles(): CSSResultArray {
     return [
@@ -93,6 +93,6 @@ export default class LitButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'lit-button': LitButton;
+    'qing-button': LitButton;
   }
 }

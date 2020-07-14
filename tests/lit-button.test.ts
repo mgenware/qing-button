@@ -3,16 +3,14 @@ import { html, fixture, expect, oneEvent } from '@open-wc/testing';
 import '../dist/main';
 
 it('Content slot', async () => {
-  const el = await fixture(html`
-    <lit-button><p>test</p></lit-button>
-  `);
+  const el = await fixture(html` <qing-button><p>test</p></qing-button> `);
 
   expect(el.innerHTML).to.eq('<p>test</p>');
 });
 
 it('Click event', async () => {
   const el = (await fixture(html`
-    <lit-button></lit-button>
+    <qing-button></qing-button>
   `)) as HTMLElement;
 
   const listener = oneEvent(el, 'click');

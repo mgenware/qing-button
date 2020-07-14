@@ -1,18 +1,18 @@
 {
-  "name": "lit-button",
+  "name": "qing-button",
   "version": "4.2.0",
-  "description": "Dead simple lit-element button",
+  "description": "Button component for qing",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "author": "Mgen (https://www.mgenware.com)",
-  "homepage": "https://github.com/mgenware/lit-button",
-  "bugs": "https://github.com/mgenware/lit-button/issues",
+  "homepage": "https://github.com/mgenware/qing-button",
+  "bugs": "https://github.com/mgenware/qing-button/issues",
   "keywords": [
     "lit-element"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgenware/lit-button.git"
+    "url": "https://github.com/mgenware/qing-button.git"
   },
   "license": "MIT",
   "scripts": {
