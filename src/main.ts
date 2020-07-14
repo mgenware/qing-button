@@ -49,9 +49,9 @@ export default class LitButton extends LitElement {
     ];
   }
 
-  @property({ type: Boolean }) disabled = false;
-  @property({ type: Boolean }) autofocus = false;
-  @property({ type: String }) href = '';
+  @property({ type: Boolean, reflect: true }) disabled = false;
+  @property({ type: Boolean, reflect: true }) autofocus = false;
+  @property({ type: String, reflect: true }) href = '';
   @property({ type: String, reflect: true }) btnStyle: QingButtonStyle = '';
 
   private buttonElement: HTMLButtonElement | null = null;
