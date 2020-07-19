@@ -3,7 +3,7 @@ import '../dist/main';
 
 const darkThemeClass = 'theme-dark';
 
-export class DemoApp extends LitElement {
+export class ExampleApp extends LitElement {
   render() {
     return html`
       <div id="main">
@@ -59,7 +59,7 @@ export class DemoApp extends LitElement {
     }
   }
 }
-DemoApp.styles = css`
+ExampleApp.styles = css`
   html {
     box-sizing: border-box;
   }
@@ -152,4 +152,4 @@ DemoApp.styles = css`
     --button-outline-color: orange;
   }
 `;
-customElements.define('demo-app', DemoApp);
+customElements.define('example-app', ExampleApp);
