@@ -8,6 +8,7 @@ import {
 } from 'lit-element';
 
 export type QingButtonStyle = 'primary' | 'success' | 'danger' | 'warning' | '';
+const selectedButtonClass = 'selected';
 
 @customElement('qing-button')
 export default class LitButton extends LitElement {
@@ -34,7 +35,8 @@ export default class LitButton extends LitElement {
         button:hover {
           opacity: 0.8;
         }
-        button:active {
+        button:active,
+        button.selected {
           filter: brightness(80%);
         }
         button:disabled {
@@ -53,6 +55,8 @@ export default class LitButton extends LitElement {
   @property({ type: Boolean, reflect: true }) autofocus = false;
   @property({ type: String, reflect: true }) href = '';
   @property({ type: String, reflect: true }) btnStyle: QingButtonStyle = '';
+  @property({ type: Boolean, reflect: true }) canSelect = false;
+  @property({ type: Boolean, reflect: true }) selected = false;
 
   private buttonElement: HTMLButtonElement | null = null;
 
@@ -69,6 +73,7 @@ export default class LitButton extends LitElement {
     return html`
       <button
         id="button"
+        class=${this.selected ? selectedButtonClass : ''}
         part="button"
         ?disabled=${this.disabled}
         ?autofocus=${this.autofocus}
@@ -90,6 +95,9 @@ export default class LitButton extends LitElement {
       window.location.href = this.href;
       e.preventDefault();
       e.stopImmediatePropagation();
+    }
+    if (this.canSelect) {
+      this.selected = !this.selected;
     }
   }
 }

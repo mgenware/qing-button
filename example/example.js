@@ -42,6 +42,9 @@ export class ExampleApp extends LitElement {
 
         <h2>CSS variables</h2>
         <qing-button id="button-outline">--button-outline-color</qing-button>
+
+        <h2>Selected</h2>
+        <qing-button canselect selected>I'm a checkbox</qing-button>
       </div>
     `;
   }
