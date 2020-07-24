@@ -4,7 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/qing-button.svg?style=flat-square)](https://npmjs.com/package/qing-button)
 [![Node.js Version](http://img.shields.io/node/v/qing-button.svg?style=flat-square)](https://nodejs.org/en/)
 
-Button component for [qing](https://github.com/mgenware/qing)
+Button component for [qing](https://github.com/mgenware/qing).
 
 ## Installation
 
@@ -19,6 +19,7 @@ yarn add qing-button
 - `disabled: boolean` indicates whether the button is disabled.
 - `autofocus: boolean` indicates whether the button is focused when the page loads.
 - `href: string` navigates to the given URL when clicked on.
+- `disableSelectedStyle: boolean` opts out of default dimmed background when selected.
 
 ### CSS Shadow Parts
 
