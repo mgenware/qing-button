@@ -45,6 +45,9 @@ export class ExampleApp extends LitElement {
 
         <h2>Selected</h2>
         <qing-button canselect selected>I'm a checkbox</qing-button>
+        <qing-button id="checkbox" canselect selected disableSelectedStyle
+          >I'm a checkbox</qing-button
+        >
       </div>
     `;
   }
@@ -153,6 +156,10 @@ ExampleApp.styles = css`
 
   #button-outline {
     --button-outline-color: orange;
+  }
+
+  #checkbox[selected]::part(button) {
+    border: 3px solid green;
   }
 `;
 customElements.define('example-app', ExampleApp);

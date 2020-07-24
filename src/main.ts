@@ -57,6 +57,7 @@ export default class LitButton extends LitElement {
   @property({ type: String, reflect: true }) btnStyle: QingButtonStyle = '';
   @property({ type: Boolean, reflect: true }) canSelect = false;
   @property({ type: Boolean, reflect: true }) selected = false;
+  @property({ type: Boolean, reflect: true }) disableSelectedStyle = false;
 
   private buttonElement: HTMLButtonElement | null = null;
 
@@ -73,7 +74,9 @@ export default class LitButton extends LitElement {
     return html`
       <button
         id="button"
-        class=${this.selected ? selectedButtonClass : ''}
+        class=${this.selected && !this.disableSelectedStyle
+          ? selectedButtonClass
+          : ''}
         part="button"
         ?disabled=${this.disabled}
         ?autofocus=${this.autofocus}
