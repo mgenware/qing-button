@@ -17,6 +17,6 @@ it('Click event', async () => {
   el.shadowRoot!.querySelector('button')!.click();
   const { detail, composed, bubbles } = await listener;
   expect(detail).to.eq(null);
-  expect(composed).to.eq(true);
-  expect(bubbles).to.eq(true);
+  expect(composed).to.eq(false);
+  expect(bubbles).to.eq(false);
 });
