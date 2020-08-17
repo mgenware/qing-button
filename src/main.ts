@@ -94,14 +94,17 @@ export default class LitButton extends LitElement {
   }
 
   private handleClick(e: Event) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
     if (this.href) {
       window.location.href = this.href;
-      e.preventDefault();
-      e.stopImmediatePropagation();
+      return;
     }
+
     if (this.canSelect) {
       this.selected = !this.selected;
     }
+    this.dispatchEvent(new CustomEvent<undefined>('click'));
   }
 }
 
