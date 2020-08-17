@@ -21,6 +21,10 @@ yarn add qing-button
 - `href: string` navigates to the given URL when clicked on.
 - `disableSelectedStyle: boolean` opts out of default dimmed background when selected.
 
+### Events
+
+- `click` fires when clicked, doesn't bubble up.
+
 ### CSS Shadow Parts
 
 - `button` the underlying button.
