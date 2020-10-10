@@ -3,13 +3,11 @@ import '../dist/main';
 
 const darkThemeClass = 'theme-dark';
 
-export class ExampleApp extends LitElement {
+export default class ExampleApp extends LitElement {
   render() {
     return html`
       <div id="main">
-        <qing-button id="btn" @click=${() => alert('Hello world')}
-          >Default</qing-button
-        >
+        <qing-button id="btn" @click=${() => alert('Hello world')}>Default</qing-button>
         <br />
         <qing-button class="green">Green</qing-button> <br />
         <qing-button class="small">Small</qing-button> <br />
@@ -27,18 +25,13 @@ export class ExampleApp extends LitElement {
         <qing-button autofocus>Auto-focused</qing-button>
         <br />
         <qing-button href="http://google.com">href = google.com</qing-button>
-        <p>
-          A <qing-button class="btn-in-paragraph">button</qing-button> in a
-          paragraph.
-        </p>
+        <p>A <qing-button class="btn-in-paragraph">button</qing-button> in a paragraph.</p>
         <p class="btn-group">
           <qing-button>Windows</qing-button>
           <qing-button>macOS</qing-button>
           <qing-button>Linux</qing-button>
         </p>
-        <qing-button id="themes" @click=${this.switchThemes}
-          >Switch themes</qing-button
-        ><br />
+        <qing-button id="themes" @click=${this.switchThemes}>Switch themes</qing-button><br />
 
         <h2>CSS variables</h2>
         <qing-button id="button-outline">--button-outline-color</qing-button>
@@ -73,6 +66,10 @@ ExampleApp.styles = css`
   *:before,
   *:after {
     box-sizing: inherit;
+  }
+
+  qing-button {
+    margin-bottom: 1rem;
   }
 
   qing-button.green::part(button) {

@@ -1,11 +1,4 @@
-import {
-  html,
-  customElement,
-  css,
-  property,
-  LitElement,
-  CSSResultArray,
-} from 'lit-element';
+import { html, customElement, css, property, LitElement, CSSResultArray } from 'lit-element';
 
 export type QingButtonStyle = 'primary' | 'success' | 'danger' | 'warning' | '';
 const selectedButtonClass = 'selected';
@@ -19,7 +12,6 @@ export default class LitButton extends LitElement {
           display: inline-block;
         }
         button {
-          margin: 0 0 1rem 0;
           background-color: #e7e7e7;
           color: black;
           border: 0;
@@ -65,18 +57,14 @@ export default class LitButton extends LitElement {
     if (!this.shadowRoot) {
       throw new Error('Unexpected undefined shadowRoot');
     }
-    this.buttonElement = this.shadowRoot.getElementById(
-      'button',
-    ) as HTMLButtonElement;
+    this.buttonElement = this.shadowRoot.getElementById('button') as HTMLButtonElement;
   }
 
   render() {
     return html`
       <button
         id="button"
-        class=${this.selected && !this.disableSelectedStyle
-          ? selectedButtonClass
-          : ''}
+        class=${this.selected && !this.disableSelectedStyle ? selectedButtonClass : ''}
         part="button"
         ?disabled=${this.disabled}
         ?autofocus=${this.autofocus}
