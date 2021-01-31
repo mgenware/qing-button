@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { html, customElement, css, property, LitElement, CSSResultArray } from 'lit-element';
 
 export type QingButtonStyle = 'primary' | 'success' | 'danger' | 'warning' | '';
