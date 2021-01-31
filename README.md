@@ -48,6 +48,8 @@ qing-button also has some CSS variables for quick customization.
 
 ### Examples
 
+See [demo](https://mgenware.github.io/qing-button/) for more examples.
+
 ```js
 html`
   <qing-button @click=${() => alert('Hello world')}>Default</qing-button>
@@ -56,10 +58,18 @@ html`
 `;
 ```
 
-### Build Instructions
+## Build Instructions
 
 > This project uses [daizong](https://github.com/mgenware/daizong) to manage scripts. You need to run scripts through daizong via `yarn r <script>` or `npm run r <script>`.
 
+### For development
+
 - `yarn r dev` compiles, and watches files in dev mode
-- `yarn r serve` runs the demo page in browser (you have to build the project first)
+- `yarn r serve` runs the demo page in browser (you need to build the project first)
+- `yarn r t` runs tests in dev mode (you need to build the project first)
+
+> Tip: You can open 3 terminal tabs during development for these 3 scripts.
+
+### For production
+
 - `yarn r build` builds, lints and tests the project in production mode
