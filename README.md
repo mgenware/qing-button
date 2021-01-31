@@ -58,7 +58,8 @@ html`
 
 ### Build Instructions
 
-- `yarn dev` builds the project in dev mode
-- `yarn build` builds and lints the project in production mode
-- `yarn serve` runs an example page in browser (you have to build the project first)
-- `yarn test` runs UI tests
+> This project uses [daizong](https://github.com/mgenware/daizong) to manage scripts. You need to run scripts through daizong via `yarn r <script>` or `npm run r <script>`.
+
+- `yarn r dev` compiles, and watches files in dev mode
+- `yarn r serve` runs the demo page in browser (you have to build the project first)
+- `yarn r build` builds, lints and tests the project in production mode
