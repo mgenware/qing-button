@@ -32,10 +32,8 @@ export default class ExampleApp extends LitElement {
           <qing-button>Linux</qing-button>
         </p>
         <qing-button id="themes" @click=${this.switchThemes}>Switch themes</qing-button><br />
-
         <h2>CSS variables</h2>
         <qing-button id="button-outline">--button-outline-color</qing-button>
-
         <h2>Selected</h2>
         <qing-button canselect selected>I'm a checkbox</qing-button>
         <qing-button id="checkbox" canselect selected disableSelectedStyle
@@ -67,11 +65,9 @@ ExampleApp.styles = css`
   *:after {
     box-sizing: inherit;
   }
-
   qing-button {
     margin-bottom: 1rem;
   }
-
   qing-button.green::part(button) {
     background-color: #4caf50;
     color: white;
@@ -92,7 +88,6 @@ ExampleApp.styles = css`
     background-color: #555555;
     color: white;
   } /* Black */
-
   qing-button.small::part(button) {
     font-size: 0.75rem;
     padding: 0.5rem 0.75rem;
@@ -130,31 +125,25 @@ ExampleApp.styles = css`
   .btn-group qing-button:last-child::part(button) {
     border-radius: 0 5px 5px 0;
   }
-
   :host {
     --default-back-color: yellowgreen;
     --default-fore-color: black;
   }
-
   .theme-dark {
     --default-back-color: black;
     --default-fore-color: #777777;
   }
-
   h1 {
     background-color: var(--default-back-color);
     color: var(--default-fore-color);
   }
-
   #themes::part(button) {
     background-color: var(--default-back-color);
     color: var(--default-fore-color);
   }
-
   #button-outline {
     --button-outline-color: orange;
   }
-
   #checkbox[selected]::part(button) {
     border: 3px solid green;
   }

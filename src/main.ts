@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { html, customElement, css, property, LitElement, CSSResultArray } from 'lit-element';
 
 export type QingButtonStyle = 'primary' | 'success' | 'danger' | 'warning' | '';
@@ -57,13 +58,12 @@ export default class LitButton extends LitElement {
     if (!this.shadowRoot) {
       throw new Error('Unexpected undefined shadowRoot');
     }
-    this.buttonElement = this.shadowRoot.getElementById('button') as HTMLButtonElement;
+    this.buttonElement = this.shadowRoot.querySelector('button');
   }
 
   render() {
     return html`
       <button
-        id="button"
         class=${this.selected && !this.disableSelectedStyle ? selectedButtonClass : ''}
         part="button"
         ?disabled=${this.disabled}

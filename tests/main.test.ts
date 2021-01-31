@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable import/no-duplicates */
 import { html, fixture, expect, oneEvent } from '@open-wc/testing';
-import '../dist/main';
+import '..';
 
 it('Content slot', async () => {
   const el = await fixture(html` <qing-button><p>test</p></qing-button> `);
@@ -9,9 +10,7 @@ it('Content slot', async () => {
 });
 
 it('Click event', async () => {
-  const el = (await fixture(html`
-    <qing-button></qing-button>
-  `)) as HTMLElement;
+  const el = (await fixture(html` <qing-button></qing-button> `)) as HTMLElement;
 
   const listener = oneEvent(el, 'click');
   el.shadowRoot!.querySelector('button')!.click();
