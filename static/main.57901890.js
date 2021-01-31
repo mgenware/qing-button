@@ -201,9 +201,8 @@ const K=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?Object
           box-shadow: inset 0 0 0 0.2rem var(--button-outline-color, #8dc3eb);
           outline: none;
         }
-      `]}firstUpdated(){if(!this.shadowRoot)throw new Error("Unexpected undefined shadowRoot");this.buttonElement=this.shadowRoot.getElementById("button")}render(){return B`
+      `]}firstUpdated(){if(!this.shadowRoot)throw new Error("Unexpected undefined shadowRoot");this.buttonElement=this.shadowRoot.querySelector("button")}render(){return B`
       <button
-        id="button"
         class=${this.selected&&!this.disableSelectedStyle?"selected":""}
         part="button"
         ?disabled=${this.disabled}

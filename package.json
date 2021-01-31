@@ -10,7 +10,7 @@
   "private": true,
   "dependencies": {
     "lit-element": "^2.4.0",
-    "qing-button": "^6.1.0"
+    "qing-button": "^7.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
