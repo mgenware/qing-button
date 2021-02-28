@@ -2,7 +2,7 @@
 /* eslint-disable import/no-duplicates */
 import { html, fixture, expect, oneEvent, aTimeout } from '@open-wc/testing';
 import '..';
-import QingButton from '../dist/main';
+import { QingButton } from '../dist/main';
 
 it('Content slot', async () => {
   const el = await fixture(html` <qing-button><p>test</p></qing-button> `);
