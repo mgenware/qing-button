@@ -14,5 +14,8 @@
     "m-fs": "^5.0.0",
     "rollup": "^2.40.0",
     "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
   }
 }
