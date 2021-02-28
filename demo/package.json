@@ -2,7 +2,6 @@
   "name": "demo",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "del-cli public && rollup -c && node ./post-public-build.js"

@@ -12,7 +12,7 @@ const plugins = [
 ];
 
 export default {
-  input: './index.js',
+  input: './main.js',
   output: {
     dir: 'public',
     format: 'iife',
