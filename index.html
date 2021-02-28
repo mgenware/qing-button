@@ -4,9 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>qing-button demo</title>
-  </head>
+    <style>
+      /** https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap.css */
+      .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
+    </style>
+  <link rel="stylesheet" href="./modern-normalize.css">
+</head>
   <body>
-    <example-app></example-app>
-    <script src="./index.bb295729.js"></script>
+    <div class="container">
+      <example-app></example-app>
+    </div>
+    <script src="./main.7686b369.js"></script>
   </body>
 </html>
