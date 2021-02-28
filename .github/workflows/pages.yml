@@ -11,8 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        working-directory: ./demo
-        run: yarn && yarn build
+        run: |
+          yarn
+          cd demo
+          yarn
+          yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
