@@ -1,6 +1,7 @@
 # qing-button
 
 [![Build Status](https://github.com/mgenware/qing-button/workflows/Build/badge.svg)](https://github.com/mgenware/qing-button/actions)
+[![Pages Status](https://github.com/mgenware/qing-button/workflows/Pages/badge.svg)](https://github.com/mgenware/qing-button/actions)
 [![npm version](https://img.shields.io/npm/v/qing-button.svg?style=flat-square)](https://npmjs.com/package/qing-button)
 [![Node.js Version](http://img.shields.io/node/v/qing-button.svg?style=flat-square)](https://nodejs.org/en/)
 
@@ -85,4 +86,3 @@ You do not need to manually run these scripts, they are already integrated into 
 ### No `prepublishOnly`
 
 The `prepublishOnly` script was removed, we recommend using [np](https://github.com/sindresorhus/np) to publish packages, which will automatically run `yarn test`, which runs `yarn r build` before publishing.
-
