@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable import/no-duplicates */
-import { html, fixture, expect, oneEvent, aTimeout } from '@open-wc/testing';
+import { html, fixture, expect, oneEvent, aTimeout, tDOM } from 'qing-t';
 import '..';
 import { QingButton } from '../dist/main';
 
-it('Content slot', async () => {
-  const el = await fixture(html` <qing-button><p>test</p></qing-button> `);
+it('Default state', async () => {
+  const el = await fixture<QingButton>(html` <qing-button><p>test</p></qing-button> `);
 
+  tDOM.isInlineBlockElement(el);
   expect(el.innerHTML).to.eq('<p>test</p>');
 });
 
