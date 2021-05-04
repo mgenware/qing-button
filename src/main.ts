@@ -1,4 +1,5 @@
-import { html, customElement, css, property, LitElement, CSSResultArray } from 'lit-element';
+import { html, css, LitElement, CSSResultArray } from 'lit';
+import { property, customElement } from 'lit/decorators.js';
 
 export type QingButtonStyle = 'primary' | 'success' | 'danger' | 'warning' | '';
 const selectedButtonClass = 'selected';
