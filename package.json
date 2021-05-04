@@ -32,22 +32,22 @@
     "lit-element": "^2.0.0"
   },
   "devDependencies": {
-    "@types/mocha": "^8.2.1",
-    "@types/node": "^14.14.31",
-    "@typescript-eslint/eslint-plugin": "^4.15.2",
-    "@typescript-eslint/parser": "^4.15.2",
-    "@web/dev-server": "^0.1.8",
-    "@web/test-runner": "^0.12.15",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "@web/dev-server": "^0.1.17",
+    "@web/test-runner": "^0.13.3",
     "daizong": "^0.13.0",
-    "eslint": "^7.21.0",
+    "eslint": "^7.25.0",
     "eslint-config-airbnb-typescript-lite": "^12.1.1",
-    "eslint-config-mgenware": "^0.0.5",
+    "eslint-config-mgenware": "^0.0.7",
     "eslint-plugin-import": "^2.22.1",
-    "lit-element": "^2.4.0",
+    "lit-element": "^2.5.0",
     "mgenware-tsconfig-wc": "^2.0.3",
-    "mocha": "^8.3.0",
-    "qing-t": "^5.0.0",
+    "mocha": "^8.3.2",
+    "qing-t": "^5.0.1",
     "source-map-support": "^0.5.19",
-    "typescript": "^4.2.2"
+    "typescript": "^4.2.4"
   }
 }
