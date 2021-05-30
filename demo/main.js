@@ -1,5 +1,5 @@
-import { html, LitElement, css } from '../node_modules/lit-element';
-import '../dist/main';
+import { html, css, LitElement } from '../node_modules/lit/index.js';
+import '../dist/main.js';
 
 const darkThemeClass = 'theme-dark';
 
