@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable import/no-duplicates */
 import { html, fixture, expect, oneEvent, aTimeout, tDOM } from 'qing-t';
-import '..';
-import { QingButton } from '../dist/main';
+import '../dist/main.js';
+import { QingButton } from '../dist/main.js';
 
 it('Default state', async () => {
   const el = await fixture<QingButton>(html` <qing-button><p>test</p></qing-button> `);
