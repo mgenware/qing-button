@@ -16,6 +16,7 @@ it('Click event', async () => {
 
   const listener = oneEvent(el, 'click');
   el.shadowRoot!.querySelector('button')!.click();
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { detail, composed, bubbles } = await listener;
   expect(detail).to.eq(null);
   expect(composed).to.eq(false);
