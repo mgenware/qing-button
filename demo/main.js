@@ -15,6 +15,7 @@ export default class ExampleApp extends LitElement {
           <qing-button btnStyle="danger">Danger</qing-button>
           <qing-button class="custom-styles">Custom styles</qing-button>
           <qing-button disabled>Disabled</qing-button>
+          <qing-button id="button-dark">Dark</qing-button>
         </p>
         <p><qing-button autofocus>Auto-focused</qing-button></p>
         <p><qing-button href="http://google.com">href = google.com</qing-button></p>
@@ -122,6 +123,13 @@ ExampleApp.styles = css`
   }
   #button-outline {
     --button-outline-color: orange;
+  }
+  #button-dark {
+    --button-outline-color: gray;
+  }
+  #button-dark::part(button) {
+    background-color: black;
+    color: #959595;
   }
   #checkbox[selected]::part(button) {
     border: 3px solid green;
