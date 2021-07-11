@@ -5,7 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/qing-button.svg?style=flat-square)](https://npmjs.com/package/qing-button)
 [![Node.js Version](http://img.shields.io/node/v/qing-button.svg?style=flat-square)](https://nodejs.org/en/)
 
-Button component for [qing](https://github.com/mgenware/qing), based on lit-element.
+Button component for [qing](https://github.com/mgenware/qing), based on lit.
 
 ## Demo
 
@@ -14,7 +14,7 @@ Button component for [qing](https://github.com/mgenware/qing), based on lit-elem
 ## Installation
 
 ```sh
-yarn add qing-button lit-element
+yarn add qing-button lit
 ```
 
 ## Usage
