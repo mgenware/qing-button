@@ -78,7 +78,7 @@ ExampleApp.styles = css`
     background-color: #ffae00;
     color: white;
   }
-  qing-button.custom-style::part(button) {
+  qing-button.custom-styles::part(button) {
     border: 4px solid yellowgreen;
     border-radius: 10px;
     background-color: #50009b;
@@ -92,6 +92,9 @@ ExampleApp.styles = css`
   .btn-group {
     display: flex;
     flex-direction: row;
+  }
+  .btn-group qing-button {
+    min-width: 100px;
   }
   .btn-group qing-button::part(button) {
     border: 1px solid gray;

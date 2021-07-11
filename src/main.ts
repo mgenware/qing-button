@@ -10,9 +10,13 @@ export class QingButton extends LitElement {
     return [
       css`
         :host {
+          box-sizing: border-box;
           display: inline-block;
+          user-select: none;
         }
         button {
+          width: 100%;
+          height: 100%;
           background-color: #e7e7e7;
           color: black;
           border: 0;
