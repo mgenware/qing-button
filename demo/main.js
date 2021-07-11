@@ -62,6 +62,9 @@ ExampleApp.styles = css`
   *:after {
     box-sizing: inherit;
   }
+  qing-button {
+    margin-bottom: 0.5rem;
+  }
   qing-button[btnStyle='success']::part(button) {
     background-color: #4caf50;
     color: white;
