@@ -50,12 +50,12 @@ it('Checkbox', async () => {
 
   const btnElement = getInternalButtonEl(el);
   btnElement.click();
-  await aTimeout(50);
+  await oneEvent(el, 'check');
   expect(el.hasAttribute('selected')).eq(true);
   expect(el.selected).to.eq(true);
 
   btnElement.click();
-  await aTimeout(50);
+  await oneEvent(el, 'check');
   expect(el.hasAttribute('selected')).eq(false);
   expect(el.selected).to.eq(false);
 });
@@ -66,12 +66,12 @@ it('Checkbox (selected)', async () => {
 
   const btnElement = getInternalButtonEl(el);
   btnElement.click();
-  await aTimeout(50);
+  await oneEvent(el, 'check');
   expect(el.hasAttribute('selected')).eq(false);
   expect(el.selected).to.eq(false);
 
   btnElement.click();
-  await aTimeout(50);
+  await oneEvent(el, 'check');
   expect(el.hasAttribute('selected')).eq(true);
   expect(el.selected).to.eq(true);
 });
