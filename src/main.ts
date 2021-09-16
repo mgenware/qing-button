@@ -48,12 +48,12 @@ export class QingButton extends LitElement {
     ];
   }
 
-  @property({ type: Boolean, reflect: true }) disabled = false;
-  @property({ type: Boolean, reflect: true }) autofocus = false;
-  @property({ type: Boolean, reflect: true }) canSelect = false;
-  @property({ type: Boolean, reflect: true }) disableSelectedStyle = false;
-  @property({ type: String, reflect: true }) href = '';
-  @property({ type: String, reflect: true }) btnStyle: QingButtonStyle = '';
+  @property({ type: Boolean }) disabled = false;
+  @property({ type: Boolean }) autofocus = false;
+  @property({ type: Boolean }) canSelect = false;
+  @property({ type: Boolean }) disableSelectedStyle = false;
+  @property({ type: String }) href = '';
+  @property({ type: String }) btnStyle: QingButtonStyle = '';
   @property({ type: Boolean, reflect: true }) selected = false;
 
   private buttonElement: HTMLButtonElement | null = null;
