@@ -72,8 +72,7 @@ export class QingButton extends LitElement {
         part="button"
         ?disabled=${this.disabled}
         ?autofocus=${this.autofocus}
-        @click=${this.handleClick}
-      >
+        @click=${this.handleClick}>
         <slot></slot>
       </button>
     `;
