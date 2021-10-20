@@ -93,7 +93,7 @@ ExampleApp.styles = css`
     margin-right: 0.25rem;
   }
   .btn-group {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
   }
   .btn-group qing-button {
