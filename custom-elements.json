@@ -13,30 +13,37 @@
             {
               "kind": "field",
               "name": "disabled"
+              "type": { "text" : "Boolean" }
             },
             {
               "kind": "field",
-              "name": "autofocus"
+              "name": "autofocus",
+              "type": { "text" : "Boolean" }
             },
             {
               "kind": "field",
-              "name": "canSelect"
+              "name": "canSelect",
+              "type": { "text" : "Boolean" }
             },
             {
               "kind": "field",
-              "name": "disableSelectedStyle"
+              "name": "disableSelectedStyle",
+              "type": { "text" : "Boolean" }
             },
             {
               "kind": "field",
-              "name": "href"
+              "name": "href",
+              "type": { "text" : "String" }
             },
             {
               "kind": "field",
-              "name": "btnStyle"
+              "name": "btnStyle",
+              "type": { "text" : "String" }
             },
             {
               "kind": "field",
-              "name": "selected"
+              "name": "selected",
+              "type": { "text" : "Boolean" }
             },
             {
               "kind": "method",
