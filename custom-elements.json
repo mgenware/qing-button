@@ -12,7 +12,7 @@
           "members": [
             {
               "kind": "field",
-              "name": "disabled"
+              "name": "disabled",
               "type": { "text" : "Boolean" }
             },
             {
