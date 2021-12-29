@@ -19,7 +19,7 @@ it('Default state', async () => {
   const btnStyles = window.getComputedStyle(btnEl);
   expect(btnStyles.display).to.eq('inline-block');
   expect(btnStyles.cursor).to.eq('pointer');
-  expect(btnStyles.padding).to.eq('9.6px 14.4px');
+  expect(btnStyles.padding).to.eq('9.600000381469727px 14.399999618530273px');
   expect(btnStyles.transition).to.eq('all 0.3s ease 0s');
   expect(btnStyles.border).to.eq('0px none rgb(0, 0, 0)');
   expect(btnStyles.borderRadius).to.eq('0px');
