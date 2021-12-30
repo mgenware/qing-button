@@ -1,4 +1,15 @@
+const nodeMajor = parseInt(process.versions.node.split('.')[0], 10);
+
 const runTestCmd = 'wtr dist_tests/**/*.test.js --node-resolve --playwright --browsers webkit';
+
+function npx(cmd) {
+  let r = 'npx';
+  if (nodeMajor >= 16) {
+    r += ' -y';
+  }
+  r += ` ${cmd}`;
+  return r;
+}
 
 export default {
   // Starts development mode: watches and compiles all source files including tests.
@@ -29,7 +40,7 @@ export default {
   lint: 'eslint --max-warnings 0 --ext .ts src/ tests/',
 
   // Validate the manifest.
-  manifest: 'npx -y validate-custom-elements-manifest',
+  manifest: npx('validate-custom-elements-manifest'),
 
   _: {
     envGroups: {
