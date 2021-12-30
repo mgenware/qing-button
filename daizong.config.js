@@ -14,7 +14,7 @@ export default {
 
   // Cleans, lints, compiles and runs tests.
   build: {
-    run: ['#clean', 'tsc -b tests', '#lint', '#t'],
+    run: ['#clean', 'tsc -b tests', '#lint', '#manifest', '#t'],
     envGroups: ['production'],
   },
 
@@ -27,6 +27,9 @@ export default {
 
   // Lints the project using ESLint (auto triggered by `npm run r build`).
   lint: 'eslint --max-warnings 0 --ext .ts src/ tests/',
+
+  // Validate the manifest.
+  manifest: 'npx -y validate-custom-elements-manifest',
 
   _: {
     envGroups: {
