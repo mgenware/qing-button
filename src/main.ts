@@ -6,7 +6,7 @@ const selectedButtonClass = 'selected';
 
 @customElement('qing-button')
 export class QingButton extends LitElement {
-  static get styles(): CSSResultArray {
+  static override get styles(): CSSResultArray {
     return [
       css`
         :host {
@@ -49,7 +49,6 @@ export class QingButton extends LitElement {
   }
 
   @property({ type: Boolean }) disabled = false;
-  @property({ type: Boolean }) autofocus = false;
   @property({ type: Boolean }) canSelect = false;
   @property({ type: Boolean }) disableSelectedStyle = false;
   @property({ type: String }) href = '';
@@ -58,14 +57,14 @@ export class QingButton extends LitElement {
 
   private buttonElement: HTMLButtonElement | null = null;
 
-  firstUpdated() {
+  override firstUpdated() {
     if (!this.shadowRoot) {
       throw new Error('Unexpected undefined shadowRoot');
     }
     this.buttonElement = this.shadowRoot.querySelector('button');
   }
 
-  render() {
+  override render() {
     return html`
       <button
         class=${this.selected && !this.disableSelectedStyle ? selectedButtonClass : ''}
@@ -78,7 +77,7 @@ export class QingButton extends LitElement {
     `;
   }
 
-  focus() {
+  override focus() {
     if (this.buttonElement) {
       this.buttonElement.focus();
     }
