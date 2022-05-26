@@ -93,9 +93,9 @@ export class QingButton extends LitElement {
 
     if (this.canSelect) {
       this.selected = !this.selected;
-      this.dispatchEvent(new CustomEvent<undefined>('check'));
+      this.dispatchEvent(new CustomEvent<void>('check'));
     }
-    this.dispatchEvent(new CustomEvent<undefined>('click'));
+    this.dispatchEvent(new CustomEvent<void>('click'));
   }
 }
 

@@ -17,6 +17,9 @@ export default {
     run: ['#clean', 'tsc -b tests -w'],
     envGroups: ['development'],
   },
+  serve: {
+    run: ['web-dev-server --open demo/ --node-resolve --watch'],
+  },
 
   // Runs tests (you need to build the project first).
   t: runTestCmd,
