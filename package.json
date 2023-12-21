@@ -1,6 +1,6 @@
 {
   "name": "qing-button",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "Button component for qing",
   "type": "module",
   "exports": "./dist/main.js",
@@ -30,7 +30,7 @@
     "custom-elements.json"
   ],
   "peerDependencies": {
-    "lit": "^2.0.0"
+    "lit": "^3.0.0"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
