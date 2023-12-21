@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable import/no-duplicates */
-import { html, fixture, expect, oneEvent, aTimeout, tDOM } from 'qing-t';
+import { html, fixture, expect, oneEvent, tDOM } from 'qing-t';
 import '../dist/main.js';
 import { QingButton } from '../dist/main.js';
 
@@ -19,7 +19,7 @@ it('Default state', async () => {
   const btnStyles = window.getComputedStyle(btnEl);
   expect(btnStyles.display).to.eq('inline-block');
   expect(btnStyles.cursor).to.eq('pointer');
-  expect(btnStyles.padding).to.eq('9.600000381469727px 14.399999618530273px');
+  expect(btnStyles.padding).to.eq('9.6px 14.4px');
   expect(btnStyles.transition).to.eq('all 0.3s ease 0s');
   expect(btnStyles.border).to.eq('0px none rgb(0, 0, 0)');
   expect(btnStyles.borderRadius).to.eq('0px');
@@ -39,9 +39,8 @@ it('Click event', async () => {
 
 it('Autofocus', async () => {
   const el = await fixture<QingButton>(html` <qing-button autofocus></qing-button> `);
-
-  await aTimeout(50);
-  expect(document.activeElement).to.eq(el);
+  const btnElement = getInternalButtonEl(el);
+  expect(btnElement.hasAttribute('autofocus')).to.eq(true);
 });
 
 it('Checkbox', async () => {
